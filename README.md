@@ -10,9 +10,10 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 這一個模版有設定一個屬性(property)： 新聞來源，  會自動帶入新聞網站的名稱
 
 ## 下載存儲的格式
----
+\-\-\-
 新聞來源： 網站
----
+\-\-\-
+
 ### 標題1： 新聞標題
 
 內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文_
