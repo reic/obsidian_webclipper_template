@@ -16,11 +16,11 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 
 \-\-\-
 
-### 標題1： 新聞標題
+###  新聞標題
 
 內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文_
 內文內文內文內文內文
 
-### 標題1：資料來源
+### 資料來源
 文件下載日期：\[新聞名稱\]\(新聞網址\)
 
