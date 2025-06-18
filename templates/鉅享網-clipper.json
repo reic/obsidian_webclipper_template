@@ -1,0 +1,18 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "鉅享網",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:main#article-container|markdown}}\n\n# 資料來源\n{{published|split:\" \"|first}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{schema:@WebSite:name}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://news.cnyes.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

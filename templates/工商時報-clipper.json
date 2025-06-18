@@ -1,0 +1,18 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "工商時報",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article|selectorHtml:img|markdown}}\n\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{meta:property:og:site_name}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.ctee.com.tw/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

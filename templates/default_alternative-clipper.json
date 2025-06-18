@@ -1,0 +1,16 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Default_alternative",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

@@ -1,0 +1,18 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Tech News",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.popup-gallery|selectHtml:img|markdown}}\n{{selectorHtml:div.indent|markdown}}\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://technews.tw/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}
