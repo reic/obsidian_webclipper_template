@@ -9,6 +9,7 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 
 這一個模版有設定一個屬性(property)： 新聞來源，  會自動帶入新聞網站的名稱
 
+在預設模版，資料來源中的 **日期** 為文章擷取日期。其它的個別模板，**日期** 指文章發佈日期。
 ## 下載存儲的格式
 \-\-\-
 
@@ -22,5 +23,5 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 內文內文內文內文內文
 
 ### 資料來源
-文件下載日期：\[新聞名稱\]\(新聞網址\)
+日期：\[新聞名稱\]\(新聞網址\)
 
