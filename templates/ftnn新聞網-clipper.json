@@ -1,0 +1,18 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "FTNN新聞網",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.news-body|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.ftnn.com.tw/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

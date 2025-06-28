@@ -23,5 +23,5 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 內文內文內文內文內文
 
 ### 資料來源
-日期：\[新聞名稱\]\(新聞網址\)
+發佈日期：\[新聞名稱\]\(新聞網址\)
 
