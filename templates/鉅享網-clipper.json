@@ -8,6 +8,11 @@
 			"name": "新聞來源",
 			"value": "{{schema:@WebSite:name}}",
 			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|split:\\\" \\\"|first}}",
+			"type": "date"
 		}
 	],
 	"triggers": [

@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "published",
-			"value": "{{url|split:\\\"/\\\"|slice:3,6|join:\\\"/\\\"}}",
+			"value": "{{url|split:\\\"/\\\"|slice:3,6|join:\\\"-\\\"}}",
 			"type": "date"
 		}
 	],
