@@ -6,7 +6,7 @@
 	"properties": [
 		{
 			"name": "新聞來源",
-			"value": "{{meta:property:og:site_name}}",
+			"value": "{{site}}",
 			"type": "text"
 		},
 		{
@@ -15,7 +15,9 @@
 			"type": "date"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"https://medium.com/"
+	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
 }
