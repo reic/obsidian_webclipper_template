@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "數位時代",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div[data-cat=\"article\"]|nth:1|remove_html:iframe|markdown|replace:(\"\\\\\\\\n\",\"\",\"\\\\\\\\t\",\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\",\"\")}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.bnext.com.tw/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

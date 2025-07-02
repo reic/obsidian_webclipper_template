@@ -6,8 +6,13 @@
 	"properties": [
 		{
 			"name": "新聞來源",
-			"value": "{{site}}",
+			"value": "{{meta:property:og:site_name}}",
 			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
 		}
 	],
 	"triggers": [],

@@ -8,6 +8,11 @@
 			"name": "新聞來源",
 			"value": "{{site}}",
 			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{url|split:\\\"/\\\"|slice:3,6|join:\\\"/\\\"}}",
+			"type": "date"
 		}
 	],
 	"triggers": [
