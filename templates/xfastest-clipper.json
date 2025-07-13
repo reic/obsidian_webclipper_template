@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "XFastest",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.vw-post-content|remove_html:(.code-block)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://news.xfastest.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

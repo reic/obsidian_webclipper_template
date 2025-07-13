@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Medium",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:article > div > div > section > div > div.gp.gq.gr.gs.gt > div > div|remove_html:(h1,.speechify-ignore)|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
@@ -15,7 +15,9 @@
 			"type": "date"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"https://medium.com/"
+	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
 }

@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "MoneyDJ理財網",
+	"name": "ETtoday新聞雲",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.story|remove_html:(.ad_in_news,.ad_readmore)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
@@ -16,7 +16,7 @@
 		}
 	],
 	"triggers": [
-		"https://www.moneydj.com/"
+		"https://www.ettoday.net/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
