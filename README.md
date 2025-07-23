@@ -7,13 +7,18 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 
 因為我習慣把下載未處理的 obsidian 文件放置在 O Fleet Note 目錄，所以，模版的預設下載目錄預設為我的習慣。
 
-這一個模版有設定一個屬性(property)： 新聞來源，  會自動帶入新聞網站的名稱
+這一個模版有設定二個屬性(property)： 
+- 新聞來源： 自動帶入新聞網站的名稱
+- published: 新聞的發佈時間
+
+如果懶的一個模版一個模版匯入，也可以直接匯入 [我的設定](https://github.com/reic/obsidian_webclipper_template/blob/main/my-settings_20250723.json)
 
 在預設模版，資料來源中的 **日期** 為文章擷取日期。其它的個別模板，**日期** 指文章發佈日期。
 ## 下載存儲的格式
 \-\-\-
 
 新聞來源： 網站
+published: 發佈日期
 
 \-\-\-
 
