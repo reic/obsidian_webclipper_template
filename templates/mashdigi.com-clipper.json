@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "mashdigi.com",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml: body > div.jeg_viewport > div.post-wrapper > div:nth-child(1) > div.jeg_main > div > div > div > div.row > div.jeg_main_content.col-md-8 > div > div.entry-content.no-share > div.content-inner | remove_html:(.jeg_post_tags)| markdown}} \n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://mashdigi.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

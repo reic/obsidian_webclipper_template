@@ -16,7 +16,8 @@
 		}
 	],
 	"triggers": [
-		"https://technews.tw/"
+		"https://technews.tw/",
+		"https://finance.technews.tw/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
