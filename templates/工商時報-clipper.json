@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "工商時報",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article>a>img|markdown}}\n\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",

@@ -11,14 +11,14 @@ This is a repository for an Obsidian Web Clipper template used to capture conten
 - 新聞來源： 自動帶入新聞網站的名稱
 - published: 新聞的發佈時間
 
-如果懶的一個模版一個模版匯入，也可以直接匯入 [我的設定](https://github.com/reic/obsidian_webclipper_template/blob/main/my-settings_20250723.json)
+如果懶的一個模版一個模版匯入，也可以直接匯入 [我的設定](https://github.com/reic/obsidian_webclipper_template/blob/main/obsidian-web-clipper-settings.json)
 
 在預設模版，資料來源中的 **日期** 為文章擷取日期。其它的個別模板，**日期** 指文章發佈日期。
 ## 下載存儲的格式
 \-\-\-
 
 新聞來源： 網站
-published: 發佈日期
+published： 發佈日期
 
 \-\-\-
 
