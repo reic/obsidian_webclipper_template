@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Default",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
@@ -15,9 +15,7 @@
 			"type": "date"
 		}
 	],
-	"triggers": [
-		"https://medium.com/"
-	],
+	"triggers": [],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
 }

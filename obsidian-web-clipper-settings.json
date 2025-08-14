@@ -60,7 +60,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 312,
+    "addToObsidian": 385,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -71,7 +71,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -200,7 +200,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article>a>img|markdown}}\n\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -262,7 +262,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -572,14 +572,124 @@
     "id": "1753336481732jtsvmsmll",
     "context": ""
   },
+  "template_1754377504001o5ujitzg5": {
+    "schemaVersion": "0.1.0",
+    "name": "新電子",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div > div.mem-post-single-content.mem-section|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.mem.com.tw/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "1754377504001o5ujitzg5",
+    "context": ""
+  },
+  "template_17545684116397h5zhwejb": {
+    "schemaVersion": "0.1.0",
+    "name": "東森新聞",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.article_main>div.article_content|remove_html:(.inline_text,.inline_box)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://news.ebc.net.tw/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "17545684116397h5zhwejb",
+    "context": ""
+  },
+  "template_1754871743728flqrw6zpr": {
+    "schemaVersion": "0.1.0",
+    "name": "遠見",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.article-content_level-0|first|remove_html:(.scroll-sec,iframe)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.gvm.com.tw/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "1754871743728flqrw6zpr",
+    "context": ""
+  },
+  "template_1755142505811kkc1mx7aa": {
+    "schemaVersion": "0.1.0",
+    "name": "鏡報",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article.brief|markdown}}\n\n{{selectorHtml:article.content|markdown}}\n\n\n# 資料來源\n{{meta:name:article:published_time|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{meta:name:article:published_time|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.mirrordaily.news/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "1755142505811kkc1mx7aa",
+    "context": ""
+  },
   "template_list": [
     "1751420490825fr2jlop",
     "1749544800247o26k4jfrh",
     "1750329334726y8lxbtm9k",
+    "1754377504001o5ujitzg5",
     "1749632846654tltwbbtlf",
     "1749736731005s8vnkt7dg",
     "1750143022841zp5kfbnx6",
     "1750126861159kzlvhxwtn",
+    "1755142505811kkc1mx7aa",
     "1750144057891j0jzs68q2",
     "1750327240892mp8qd2i",
     "1750330172873cjfygsp35",
@@ -589,9 +699,11 @@
     "1751420526452xu8w8b408",
     "1750657568076raoj4yw9e",
     "17518539622729g8e1g2v3",
+    "1754871743728flqrw6zpr",
     "1752203301187ty0e1dvuw",
     "1753336481732jtsvmsmll",
-    "17532574651453n3ga04k3"
+    "17532574651453n3ga04k3",
+    "17545684116397h5zhwejb"
   ],
   "vaults": []
 }

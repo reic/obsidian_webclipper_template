@@ -1,12 +1,12 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "highlights",
+	"name": "新電子",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml: div > div.mem-post-single-content.mem-section|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
-			"value": "{{meta:property:og:site_name}}",
+			"value": "{{site}}",
 			"type": "text"
 		},
 		{
@@ -15,7 +15,9 @@
 			"type": "date"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"https://www.mem.com.tw/"
+	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
 }

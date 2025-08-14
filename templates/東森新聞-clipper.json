@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Default_alternative",
+	"name": "東森新聞",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.article_main>div.article_content|remove_html:(.inline_text,.inline_box)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
@@ -15,7 +15,9 @@
 			"type": "date"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"https://news.ebc.net.tw/"
+	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
 }
