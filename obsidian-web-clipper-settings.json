@@ -2,6 +2,7 @@
   "general_settings": {
     "betaFeatures": false,
     "legacyMode": false,
+    "openBehavior": "popup",
     "saveBehavior": "addToObsidian",
     "showMoreActionsButton": false,
     "silentOpen": true
@@ -60,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 385,
+    "addToObsidian": 607,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -121,7 +122,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY-MM-DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -173,7 +174,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.popup-gallery|selectHtml:img|markdown}}\n{{selectorHtml:div.indent|markdown}}\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.indent|remove_html:(iframe)|markdown}}\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -308,7 +309,7 @@
   },
   "template_1750657568076raoj4yw9e": {
     "id": "1750657568076raoj4yw9e",
-    "name": "MoneyDJ理財網,風傳媒,方格子",
+    "name": "MoneyDJ理財網,風傳媒,方格子,三立iNews",
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
@@ -331,7 +332,8 @@
     "triggers": [
       "https://www.moneydj.com/",
       "https://www.storm.mg/",
-      "https://vocus.cc/"
+      "https://vocus.cc/",
+      "https://inews.setn.com/"
     ]
   },
   "template_175091596503536lfr8aoq": {
@@ -416,16 +418,16 @@
     "schemaVersion": "0.1.0",
     "name": "Default",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY-MM-DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
         "name": "新聞來源",
-        "value": "{{site}}",
+        "value": "{{meta:property:og:site_name}}",
         "type": "text"
       },
       {
-        "id": "1751418224474zxaxyd4r2",
+        "id": "175127299919372ztzlaqb",
         "name": "published",
         "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "date"
@@ -549,7 +551,7 @@
     "schemaVersion": "0.1.0",
     "name": "自由財經",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:#ec > div.content > section > div:nth-child(5) > div.text|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: #ec > div.content > section > div:nth-child(5) > div.text|markdown}}{{selectorHtml: #ec > div.content > section > div:nth-child(6) > div.text|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -680,6 +682,60 @@
     "id": "1755142505811kkc1mx7aa",
     "context": ""
   },
+  "template_17555705639778ossj0ris": {
+    "schemaVersion": "0.1.0",
+    "name": "iknow",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#data_content|remove_html:(.post-share-content)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://iknow.stpi.niar.org.tw/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "17555705639778ossj0ris",
+    "context": ""
+  },
+  "template_1756890625836aldiwahqx": {
+    "id": "1756890625836aldiwahqx",
+    "name": "ithome",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(ul,.ad-content)|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "context": "",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{meta:property:og:site_name}}",
+        "type": "text"
+      },
+      {
+        "id": "175127299919372ztzlaqb",
+        "name": "published",
+        "value": "{{content|split:\\\" \\\"|nth:3|join}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.inside.com.tw/",
+      "https://www.ithome.com.tw/"
+    ]
+  },
   "template_list": [
     "1751420490825fr2jlop",
     "1749544800247o26k4jfrh",
@@ -689,10 +745,12 @@
     "1749736731005s8vnkt7dg",
     "1750143022841zp5kfbnx6",
     "1750126861159kzlvhxwtn",
+    "17555705639778ossj0ris",
     "1755142505811kkc1mx7aa",
     "1750144057891j0jzs68q2",
     "1750327240892mp8qd2i",
     "1750330172873cjfygsp35",
+    "1756890625836aldiwahqx",
     "175091596503536lfr8aoq",
     "17513501277677tbmo71q2",
     "17510802568702jxqjeuyg",

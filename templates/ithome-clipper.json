@@ -1,0 +1,24 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "ithome",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(ul,.ad-content)|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{meta:property:og:site_name}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{content|split:\\\" \\\"|nth:3|join}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.inside.com.tw/",
+		"https://www.ithome.com.tw/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

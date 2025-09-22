@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Tech News",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.popup-gallery|selectHtml:img|markdown}}\n{{selectorHtml:div.indent|markdown}}\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.indent|remove_html:(iframe)|markdown}}\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",

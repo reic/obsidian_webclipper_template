@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "自由財經",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml: #ec > div.content > section > div:nth-child(5) > div.text|markdown}}{{selectorHtml: #ec > div.content > section > div:nth-child(6) > div.text|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://ec.ltn.com.tw/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

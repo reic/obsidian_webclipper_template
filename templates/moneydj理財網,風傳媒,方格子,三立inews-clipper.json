@@ -1,0 +1,26 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "MoneyDJ理財網,風傳媒,方格子,三立iNews",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.moneydj.com/",
+		"https://www.storm.mg/",
+		"https://vocus.cc/",
+		"https://inews.setn.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}
