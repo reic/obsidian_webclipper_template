@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 607,
+    "addToObsidian": 744,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -88,7 +88,9 @@
         "type": "date"
       }
     ],
-    "triggers": []
+    "triggers": [
+      "https://www.techbang.com/"
+    ]
   },
   "template_1749632846654tltwbbtlf": {
     "id": "1749632846654tltwbbtlf",
@@ -174,7 +176,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.indent|remove_html:(iframe)|markdown}}\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.indent|remove_html:(iframe)|markdown}}\n\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -418,18 +420,18 @@
     "schemaVersion": "0.1.0",
     "name": "Default",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY-MM-DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
-        "id": "17503272408923mz7fbk",
+        "id": "1749544800248mj95ocp9a",
         "name": "新聞來源",
-        "value": "{{meta:property:og:site_name}}",
+        "value": "{{schema:@WebSite:name}}",
         "type": "text"
       },
       {
-        "id": "175127299919372ztzlaqb",
+        "id": "1751427736893chmgdbhp1",
         "name": "published",
-        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "value": "{{published|split:\\\" \\\"|first}}",
         "type": "date"
       }
     ],
@@ -736,15 +738,70 @@
       "https://www.ithome.com.tw/"
     ]
   },
+  "template_1759371664862d9qleipan": {
+    "id": "1759371664862d9qleipan",
+    "name": "鉅享號",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "context": "",
+    "properties": [
+      {
+        "id": "1749544800248mj95ocp9a",
+        "name": "新聞來源",
+        "value": "鉅亨網",
+        "type": "text"
+      },
+      {
+        "id": "1751427736893chmgdbhp1",
+        "name": "published",
+        "value": "{{published|split:\\\" \\\"|first}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://hao.cnyes.com/"
+    ]
+  },
+  "template_1761555523628yof8njpu9": {
+    "schemaVersion": "0.1.0",
+    "name": "太報",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.news-box-text|remove_html:(.news-label) |markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "1749544800248mj95ocp9a",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751427736893chmgdbhp1",
+        "name": "published",
+        "value": "{{published|split:\\\" \\\"|first}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.taisounds.com/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "1761555523628yof8njpu9",
+    "context": ""
+  },
   "template_list": [
     "1751420490825fr2jlop",
     "1749544800247o26k4jfrh",
     "1750329334726y8lxbtm9k",
+    "1761555523628yof8njpu9",
     "1754377504001o5ujitzg5",
     "1749632846654tltwbbtlf",
     "1749736731005s8vnkt7dg",
     "1750143022841zp5kfbnx6",
     "1750126861159kzlvhxwtn",
+    "1759371664862d9qleipan",
     "17555705639778ossj0ris",
     "1755142505811kkc1mx7aa",
     "1750144057891j0jzs68q2",
