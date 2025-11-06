@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 744,
+    "addToObsidian": 841,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -791,6 +791,32 @@
     "id": "1761555523628yof8njpu9",
     "context": ""
   },
+  "template_1762418206222ip8lpfkdb": {
+    "id": "1762418206222ip8lpfkdb",
+    "name": "聯合報",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "context": "",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{author}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://udn.com/"
+    ]
+  },
   "template_list": [
     "1751420490825fr2jlop",
     "1749544800247o26k4jfrh",
@@ -803,6 +829,7 @@
     "1750126861159kzlvhxwtn",
     "1759371664862d9qleipan",
     "17555705639778ossj0ris",
+    "1762418206222ip8lpfkdb",
     "1755142505811kkc1mx7aa",
     "1750144057891j0jzs68q2",
     "1750327240892mp8qd2i",

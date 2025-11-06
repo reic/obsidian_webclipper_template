@@ -1,12 +1,12 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "MoneyDJ理財網,風傳媒,方格子",
+	"name": "聯合報",
 	"behavior": "create",
 	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
-			"value": "{{site}}",
+			"value": "{{author}}",
 			"type": "text"
 		},
 		{
@@ -16,9 +16,7 @@
 		}
 	],
 	"triggers": [
-		"https://www.moneydj.com/",
-		"https://www.storm.mg/",
-		"https://vocus.cc/"
+		"https://udn.com/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
