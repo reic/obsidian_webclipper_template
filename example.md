@@ -1,0 +1,29 @@
+# 研討會簡要記錄
+- 記憶體三大廠的技術策略不一樣。 美光符合JEDEC，三星和SK海力士，則以超越規格為主
+- 三星在HBM3 採用落後於 SK海力士和美光的記憶體 memory die的 1a 做堆疊，應此效能不如預期
+- 在 HBM4 ，三星用 4nm base die，以超強的規格提供 HBM 產品，因此在這一個技術世代， 三星具有優勢
+- HBM 每二個世代在 mono die density 做一次提升，HBM4 和 HMB3e 的單位密度是一樣的 24Gb，所以 HBM4 即使有客製化 base die 的可能性，但是需求方不一定會投入資源
+- HBM4 可能是最短命的一個世代
+- 2026 HBM4e 會推出，客製化的版本預計在 2027H2 提供
+- HBM4 目前都是標準版
+- 客製化的base die上，可能含external memories 的控制能力，可能接通傳統的 DRAM。為了達到上面的目標，base die 上應該要具備 I/O function，支援 NVLink 或是 PCIe 
+- META 採用的 HBM4e 的base die 就具備串接使用 external memory 的能力
+- 美光在 2026年底 HBM 預計在新加坡進行 HBM 堆疊，2027年量產
+- 配合美國的策略，美光2029年將會在美國具有封裝 HBM的能力
+- NVIDIA Rubin Ultra 在2027年提供，美光在美國仍不具備相關的能力
+- 依據最新的消息，AI server 過去 L6 ~ L10 都是不同的公司負責，但因為散熱問題，NVIDIA 預計將相關的工作交由同一間公司負責
+- NVIDIA 沒有聽到要使用HBM3e 16hi 的消息
+- HBM4 已經進入風險性量產，處於 wafer stop 階段，三大廠都在等驗證中
+- 2026年市場預測下滑，主要因為 HBM3e 在 2027年用不到，所以客戶會降低備貨，三大廠減產
+- 南亞科二廠具有金屬層、TSV 的能力，但不符合 JEDEC 的標準
+- 目前因為DDR5 價格的上漲， 目前 per  wafer DDR5 的獲利優於 HBM
+- Trend Force 的 HBM 市場佔有率指的是最大產能預估，不銷售金額
+- 未來新的封裝技術，可能採用EBIM封裝，而不是CoWoS，因為 EBIM 的架構比較簡單，且便宜
+- EBIM 封裝的生產成本約 6,000 USD  , CoWoS封裝為 12,000 USD
+- 目前 HBM 需要先提供備貨， Lead Time 為 3季
+- 南亞科技的 DDR5 產品有獲得 華碩、hp 電腦的使用
+- 南亞科 的記憶體和CPU堆疊的方案，有和 Qualcomm 
+- 南亞科的 backside 是福懋科
+- 南亞科 1b => 1y 採用 17nm ，目前 ddr5 有現貨，支援到 5600Hz。預計 1c 開始使用 EUV。1c 對應到 1z
+- HBF 目前的技術，以 TLC為主。 SK海力士 有相關的技術藍圖(roadmap)，預計2026年會有樣品
+- 目前記憶體晶圓廠缺無塵室，是擴大產能的瓶頸
