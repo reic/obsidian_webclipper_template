@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Digitimes_research",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n{{selectorHtml:div#report-text-content|remove_attr:\"title\"|markdown}}\n\n\n# 資料來源\n{{published|split:\"-\"|first|join:\"\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{author}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|split:\\\"-\\\"|first|join:\\\"\\\"|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.digitimes.com.tw/research/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

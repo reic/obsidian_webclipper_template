@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Digitimes",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}{{selectorHtml:div#report-text-content|remove_attr:\"title\"|markdown}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",

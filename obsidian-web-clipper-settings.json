@@ -124,7 +124,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}{{selectorHtml:div#report-text-content|remove_attr:\"title\"|markdown}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -418,24 +418,26 @@
   },
   "template_1751420490825fr2jlop": {
     "schemaVersion": "0.1.0",
-    "name": "Default",
+    "name": "Digitimes_research",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n\n{{selectorHtml:div#report-text-content|remove_attr:\"title\"|markdown}}\n\n\n# 資料來源\n{{published|split:\"-\"|first|join:\"\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "1749544800248mj95ocp9a",
         "name": "新聞來源",
-        "value": "{{schema:@WebSite:name}}",
+        "value": "{{author}}",
         "type": "text"
       },
       {
-        "id": "1751427736893chmgdbhp1",
+        "id": "1751426696598jdqqeswfx",
         "name": "published",
-        "value": "{{published|split:\\\" \\\"|first}}",
+        "value": "{{published|split:\\\"-\\\"|first|join:\\\"\\\"|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "date"
       }
     ],
-    "triggers": [],
+    "triggers": [
+      "https://www.digitimes.com.tw/research/"
+    ],
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
     "id": "1751420490825fr2jlop",
@@ -817,14 +819,39 @@
       "https://udn.com/"
     ]
   },
+  "template_1762996118441j4jv07a": {
+    "schemaVersion": "0.1.0",
+    "name": "Default",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17629961184427zj4y47",
+        "name": "新聞來源",
+        "value": "{{schema:@WebSite:name}}",
+        "type": "text"
+      },
+      {
+        "id": "1762996118442fy178cv",
+        "name": "published",
+        "value": "{{published|split:\\\" \\\"|first}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "1762996118441j4jv07a"
+  },
   "template_list": [
-    "1751420490825fr2jlop",
+    "1762996118441j4jv07a",
     "1749544800247o26k4jfrh",
     "1750329334726y8lxbtm9k",
     "1761555523628yof8njpu9",
     "1754377504001o5ujitzg5",
     "1749632846654tltwbbtlf",
     "1749736731005s8vnkt7dg",
+    "1751420490825fr2jlop",
     "1750143022841zp5kfbnx6",
     "1750126861159kzlvhxwtn",
     "1759371664862d9qleipan",
