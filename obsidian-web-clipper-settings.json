@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 841,
+    "addToObsidian": 848,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -124,7 +124,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsText|remove_attr:\"title\"|markdown}}{{selectorHtml:div#report-text-content|remove_attr:\"title\"|markdown}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
