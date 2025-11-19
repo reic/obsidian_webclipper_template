@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 848,
+    "addToObsidian": 888,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -203,7 +203,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article>a>img|markdown}}\n\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article|first|join:''|markdown}}\n\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -396,7 +396,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div[data-cat=\"article\"]|nth:1|remove_html:iframe|markdown|replace:(\"\\\\\\\\n\",\"\",\"\\\\\\\\t\",\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\",\"\")}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div[data-cat=\"article\"]|nth:1|join:\"\"|remove_html:iframe|markdown|replace:(\"\\\\\\\\n\",\"\",\"\\\\\\\\t\",\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\",\"\")}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
