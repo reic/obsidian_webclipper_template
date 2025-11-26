@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 888,
+    "addToObsidian": 940,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -78,7 +78,7 @@
       {
         "id": "1749544800248mj95ocp9a",
         "name": "新聞來源",
-        "value": "{{site}}",
+        "value": "{{schema:@WebSite:name}}",
         "type": "text"
       },
       {
@@ -335,7 +335,8 @@
       "https://www.moneydj.com/",
       "https://www.storm.mg/",
       "https://vocus.cc/",
-      "https://inews.setn.com/"
+      "https://inews.setn.com/",
+      "https://www.setn.com/"
     ]
   },
   "template_175091596503536lfr8aoq": {
@@ -828,20 +829,21 @@
       {
         "id": "17629961184427zj4y47",
         "name": "新聞來源",
-        "value": "{{schema:@WebSite:name}}",
+        "value": "{{site}}",
         "type": "text"
       },
       {
         "id": "1762996118442fy178cv",
         "name": "published",
-        "value": "{{published|split:\\\" \\\"|first}}",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "date"
       }
     ],
     "triggers": [],
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "id": "1762996118441j4jv07a"
+    "id": "1762996118441j4jv07a",
+    "context": ""
   },
   "template_list": [
     "1762996118441j4jv07a",

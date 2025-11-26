@@ -19,7 +19,8 @@
 		"https://www.moneydj.com/",
 		"https://www.storm.mg/",
 		"https://vocus.cc/",
-		"https://inews.setn.com/"
+		"https://inews.setn.com/",
+		"https://www.setn.com/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
