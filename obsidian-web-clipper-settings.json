@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 940,
+    "addToObsidian": 1328,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -88,9 +88,7 @@
         "type": "date"
       }
     ],
-    "triggers": [
-      "https://www.techbang.com/"
-    ]
+    "triggers": []
   },
   "template_1749632846654tltwbbtlf": {
     "id": "1749632846654tltwbbtlf",
@@ -194,7 +192,8 @@
     ],
     "triggers": [
       "https://technews.tw/",
-      "https://finance.technews.tw/"
+      "https://finance.technews.tw/",
+      "https://ccc.technews.tw/"
     ]
   },
   "template_1750144057891j0jzs68q2": {
@@ -845,6 +844,33 @@
     "id": "1762996118441j4jv07a",
     "context": ""
   },
+  "template_17690449795604hmdikyta": {
+    "schemaVersion": "0.1.0",
+    "name": "上報",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:#wrapper > div.sub > div.container > div > div.col-lg-9.sub-pl > div.news-box|remove_html:(#_popIn_recommend_word,.news-label)|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17629961184427zj4y47",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1762996118442fy178cv",
+        "name": "published",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.upmedia.mg/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "17690449795604hmdikyta",
+    "context": ""
+  },
   "template_list": [
     "1762996118441j4jv07a",
     "1749544800247o26k4jfrh",
@@ -856,6 +882,7 @@
     "1751420490825fr2jlop",
     "1750143022841zp5kfbnx6",
     "1750126861159kzlvhxwtn",
+    "17690449795604hmdikyta",
     "1759371664862d9qleipan",
     "17555705639778ossj0ris",
     "1762418206222ip8lpfkdb",
