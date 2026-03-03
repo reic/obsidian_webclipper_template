@@ -1,5 +1,6 @@
 # Webclipper
 
+## Web clipper filter 改版，請修正下載
 This is a repository for an Obsidian Web Clipper template used to capture content from websites I regularly visit.
 
 這裡的 Web Clipper 指的是 [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper) 套件。如何安裝 templates，請參考 [Obisidian 官網的 Web Clipper 文件](https://help.obsidian.md/web-clipper/templates)。

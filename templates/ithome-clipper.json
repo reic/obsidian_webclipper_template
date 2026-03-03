@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "ithome",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(ul,.ad-content)|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",

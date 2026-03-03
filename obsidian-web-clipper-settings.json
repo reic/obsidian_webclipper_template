@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 1328,
+    "addToObsidian": 1531,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -202,7 +202,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article|first|join:''|markdown}}\n\n{{selectorHtml:article|remove_html:.related-inline|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.picture--article|first|join:''|markdown}}\n\n{{selectorHtml:article|remove_html:\".related-inline\"|markdown}}\n\n# 資料來源\n{{meta:name:pubdate|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -235,7 +235,7 @@
     "schemaVersion": "0.1.0",
     "name": "經濟日報",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.article-image|selectorHtml:img|markdown}}\n{{selectorHtml:section#article_body|markdown}}{{selector:#main > p:nth-child(n)|join:\"\\n\"|trim}}\n\n# 資料來源\n{{schema:@NewsArticle:datePublished|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.article-image|markdown}}\n{{selectorHtml:section#article_body|markdown}}{{selector:#main > p:nth-child(n)|join:\"\\n\"|trim}}\n\n# 資料來源\n{{schema:@NewsArticle:datePublished|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -344,7 +344,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(ul,.ad-content)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -396,7 +396,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div[data-cat=\"article\"]|nth:1|join:\"\"|remove_html:iframe|markdown|replace:(\"\\\\\\\\n\",\"\",\"\\\\\\\\t\",\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\",\"\")}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div[data-cat=\"article\"]|nth:1|join:\"\"|remove_html:iframe|markdown|replace:(\"\\\\\\\\n\":\"\",\"\\\\\\\\t\":\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\":\"\")}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -447,7 +447,7 @@
     "schemaVersion": "0.1.0",
     "name": "Medium",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article > div > div > section > div > div.gp.gq.gr.gs.gt > div > div|remove_html:(h1,.speechify-ignore)|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article > div > div > section > div > div.gp.gq.gr.gs.gt > div > div|remove_html:(\"h1,.speechify-ignore\")|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "1751420490825e3e792z",
@@ -474,7 +474,7 @@
     "schemaVersion": "0.1.0",
     "name": "XFastest",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.vw-post-content|remove_html:(.code-block)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.vw-post-content|remove_html:(\".code-block\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -501,7 +501,7 @@
     "schemaVersion": "0.1.0",
     "name": "ETtoday新聞雲",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.story|remove_html:(.ad_in_news,.ad_readmore)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.story|remove_html:(\".ad_in_news,.ad_readmore\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -528,7 +528,7 @@
     "schemaVersion": "0.1.0",
     "name": "mashdigi.com",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml: body > div.jeg_viewport > div.post-wrapper > div:nth-child(1) > div.jeg_main > div > div > div > div.row > div.jeg_main_content.col-md-8 > div > div.entry-content.no-share > div.content-inner | remove_html:(.jeg_post_tags)| markdown}} \n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: body > div.jeg_viewport > div.post-wrapper > div:nth-child(1) > div.jeg_main > div > div > div > div.row > div.jeg_main_content.col-md-8 > div > div.entry-content.no-share > div.content-inner | remove_html:(\".jeg_post_tags\")| markdown}} \n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -609,7 +609,7 @@
     "schemaVersion": "0.1.0",
     "name": "東森新聞",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.article_main>div.article_content|remove_html:(.inline_text,.inline_box)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.article_main>div.article_content|remove_html:(\".inline_text,.inline_box\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -636,7 +636,7 @@
     "schemaVersion": "0.1.0",
     "name": "遠見",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.article-content_level-0|first|remove_html:(.scroll-sec,iframe)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.article-content_level-0|first|remove_html:(\".scroll-sec,iframe\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -690,7 +690,7 @@
     "schemaVersion": "0.1.0",
     "name": "iknow",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#data_content|remove_html:(.post-share-content)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#data_content|remove_html:(\".post-share-content\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
@@ -719,7 +719,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(ul,.ad-content)|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -770,7 +770,7 @@
     "schemaVersion": "0.1.0",
     "name": "太報",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.news-box-text|remove_html:(.news-label) |markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.news-box-text|remove_html:(\".news-label\") |markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "1749544800248mj95ocp9a",
@@ -799,7 +799,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:figure.article-content__cover|markdown}}\n\n{{selectorHtml:article|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -848,7 +848,7 @@
     "schemaVersion": "0.1.0",
     "name": "上報",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:#wrapper > div.sub > div.container > div > div.col-lg-9.sub-pl > div.news-box|remove_html:(#_popIn_recommend_word,.news-label)|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:#wrapper > div.sub > div.container > div > div.col-lg-9.sub-pl > div.news-box|remove_html:(\"#_popIn_recommend_word,.news-label\")|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17629961184427zj4y47",

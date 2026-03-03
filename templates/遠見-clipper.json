@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "遠見",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml: div.article-content_level-0|first|remove_html:(.scroll-sec,iframe)|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml: div.article-content_level-0|first|remove_html:(\".scroll-sec,iframe\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",

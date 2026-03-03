@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "上報",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:#wrapper > div.sub > div.container > div > div.col-lg-9.sub-pl > div.news-box|remove_html:(#_popIn_recommend_word,.news-label)|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:#wrapper > div.sub > div.container > div > div.col-lg-9.sub-pl > div.news-box|remove_html:(\"#_popIn_recommend_word,.news-label\")|markdown}}\n\n# 資料來源\n{{date|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
