@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 1531,
+    "addToObsidian": 1572,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -555,7 +555,7 @@
     "schemaVersion": "0.1.0",
     "name": "自由財經",
     "behavior": "create",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml: #ec > div.content > section > div:nth-child(5) > div.text|markdown}}{{selectorHtml: #ec > div.content > section > div:nth-child(6) > div.text|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div[data-desc=\"內文\"] > div.text|remove_html:(\"iframe\")|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "properties": [
       {
         "id": "17503272408923mz7fbk",
