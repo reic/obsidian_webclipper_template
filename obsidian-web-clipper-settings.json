@@ -61,7 +61,7 @@
     "themeMode": "auto"
   },
   "stats": {
-    "addToObsidian": 1572,
+    "addToObsidian": 1656,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -571,7 +571,8 @@
       }
     ],
     "triggers": [
-      "https://ec.ltn.com.tw/"
+      "https://ec.ltn.com.tw/",
+      "https://3c.ltn.com.tw/"
     ],
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",

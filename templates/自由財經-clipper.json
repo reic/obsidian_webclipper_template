@@ -16,7 +16,8 @@
 		}
 	],
 	"triggers": [
-		"https://ec.ltn.com.tw/"
+		"https://ec.ltn.com.tw/",
+		"https://3c.ltn.com.tw/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
