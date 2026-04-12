@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "雷蒙31",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:#content > div > div.elementor-element.elementor-element-99425ed.e-flex.e-con-boxed.e-con.e-parent > div > div.elementor-element.elementor-element-444e869.leftcontent.e-flex.e-con-boxed.e-con.e-child > div > div > div.elementor-element.elementor-element-f6aa65c.postinner.elementor-widget.elementor-widget-theme-post-content > div|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://raymondhouch.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

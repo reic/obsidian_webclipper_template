@@ -54,14 +54,20 @@
     }
   ],
   "reader_settings": {
+    "appearance": "auto",
+    "blendImages": true,
+    "colorLinks": false,
+    "customCss": "",
+    "darkTheme": "same",
+    "defaultFont": "",
     "fontSize": 1.5,
+    "fonts": [],
+    "lightTheme": "default",
     "lineHeight": 1.6,
-    "maxWidth": 38,
-    "theme": "default",
-    "themeMode": "auto"
+    "maxWidth": 38
   },
   "stats": {
-    "addToObsidian": 1656,
+    "addToObsidian": 1786,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -872,6 +878,33 @@
     "id": "17690449795604hmdikyta",
     "context": ""
   },
+  "template_1775781630428wk9p4k4zr": {
+    "schemaVersion": "0.1.0",
+    "name": "雷蒙31",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:#content > div > div.elementor-element.elementor-element-99425ed.e-flex.e-con-boxed.e-con.e-parent > div > div.elementor-element.elementor-element-444e869.leftcontent.e-flex.e-con-boxed.e-con.e-child > div > div > div.elementor-element.elementor-element-f6aa65c.postinner.elementor-widget.elementor-widget-theme-post-content > div|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17629961184427zj4y47",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1762996118442fy178cv",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://raymondhouch.com/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "1775781630428wk9p4k4zr",
+    "context": ""
+  },
   "template_list": [
     "1762996118441j4jv07a",
     "1749544800247o26k4jfrh",
@@ -892,6 +925,7 @@
     "1750327240892mp8qd2i",
     "1750330172873cjfygsp35",
     "1756890625836aldiwahqx",
+    "1775781630428wk9p4k4zr",
     "175091596503536lfr8aoq",
     "17513501277677tbmo71q2",
     "17510802568702jxqjeuyg",
