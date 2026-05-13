@@ -55,19 +55,23 @@
   ],
   "reader_settings": {
     "appearance": "auto",
+    "autoScroll": true,
     "blendImages": true,
     "colorLinks": false,
     "customCss": "",
     "darkTheme": "same",
     "defaultFont": "",
+    "followLinks": true,
     "fontSize": 1.5,
     "fonts": [],
+    "highlightActiveLine": true,
     "lightTheme": "default",
     "lineHeight": 1.6,
-    "maxWidth": 38
+    "maxWidth": 38,
+    "pinPlayer": true
   },
   "stats": {
-    "addToObsidian": 1786,
+    "addToObsidian": 2023,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -402,7 +406,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:div[data-cat=\"article\"]|nth:1|join:\"\"|remove_html:iframe|markdown|replace:(\"\\\\\\\\n\":\"\",\"\\\\\\\\t\":\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\":\"\")}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div.htmlview.article-content|nth:1|join:\"\"|remove_html:(\"iframe\",\".pumpkin_epaper\")|markdown|replace:(\"\\\\\\\\n\":\"\",\"\\\\\\\\t\":\"\",\"/\\\\(\\[|\\])\\\"\\n\\n/\":\"\")}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -738,7 +742,7 @@
       {
         "id": "175127299919372ztzlaqb",
         "name": "published",
-        "value": "{{content|split:\\\" \\\"|nth:3|join}}",
+        "value": "{{selectorHtml:span.created|markdown}}",
         "type": "date"
       }
     ],

@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "published",
-			"value": "{{content|split:\\\" \\\"|nth:3|join}}",
+			"value": "{{selectorHtml:span.created|markdown}}",
 			"type": "date"
 		}
 	],
