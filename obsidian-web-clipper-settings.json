@@ -62,7 +62,7 @@
     "darkTheme": "same",
     "defaultFont": "",
     "followLinks": true,
-    "fontSize": 1.5,
+    "fontSize": 9,
     "fonts": [],
     "highlightActiveLine": true,
     "lightTheme": "default",
@@ -71,9 +71,9 @@
     "pinPlayer": true
   },
   "stats": {
-    "addToObsidian": 2023,
+    "addToObsidian": 2224,
     "copyToClipboard": 0,
-    "saveFile": 0,
+    "saveFile": 1,
     "share": 0
   },
   "template_1749544800247o26k4jfrh": {
@@ -522,12 +522,12 @@
       {
         "id": "1751418224474zxaxyd4r2",
         "name": "published",
-        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "value": "{{meta:name:pubdate|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "date"
       }
     ],
     "triggers": [
-      "https://www.ettoday.net/"
+      "/^https:\\/\\/([a-zA-Z0-9-]+\\.)?ettoday\\.net\\/.*/"
     ],
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
@@ -730,7 +730,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{content|split:\" \"|nth:3|join|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{selectorHtml:span.created|markdown}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -942,5 +942,7 @@
     "17532574651453n3ga04k3",
     "17545684116397h5zhwejb"
   ],
-  "vaults": []
+  "vaults": [
+    "personal"
+  ]
 }

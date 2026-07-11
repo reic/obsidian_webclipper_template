@@ -11,12 +11,12 @@
 		},
 		{
 			"name": "published",
-			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"value": "{{meta:name:pubdate|date:\\\"YYYY-MM-DD\\\"}}",
 			"type": "date"
 		}
 	],
 	"triggers": [
-		"https://www.ettoday.net/"
+		"/^https:\\/\\/([a-zA-Z0-9-]+\\.)?ettoday\\.net\\/.*/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
