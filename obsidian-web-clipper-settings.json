@@ -71,7 +71,7 @@
     "pinPlayer": true
   },
   "stats": {
-    "addToObsidian": 2224,
+    "addToObsidian": 2495,
     "copyToClipboard": 0,
     "saveFile": 1,
     "share": 0
@@ -201,9 +201,7 @@
       }
     ],
     "triggers": [
-      "https://technews.tw/",
-      "https://finance.technews.tw/",
-      "https://ccc.technews.tw/"
+      "/^https:\\/\\/([a-zA-Z0-9-]+\\.)?technews\\.tw\\/.*/"
     ]
   },
   "template_1750144057891j0jzs68q2": {
@@ -909,10 +907,38 @@
     "id": "1775781630428wk9p4k4zr",
     "context": ""
   },
+  "template_17852167474485ubqxnxj1": {
+    "schemaVersion": "0.1.0",
+    "name": "semiengineering",
+    "behavior": "create",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml: div.post_cnt|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "properties": [
+      {
+        "id": "17629961184427zj4y47",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1762996118442fy178cv",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://semiengineering.com/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "id": "17852167474485ubqxnxj1",
+    "context": ""
+  },
   "template_list": [
     "1762996118441j4jv07a",
     "1749544800247o26k4jfrh",
     "1750329334726y8lxbtm9k",
+    "17852167474485ubqxnxj1",
     "1761555523628yof8njpu9",
     "1754377504001o5ujitzg5",
     "1749632846654tltwbbtlf",
@@ -943,6 +969,6 @@
     "17545684116397h5zhwejb"
   ],
   "vaults": [
-    "personal"
+    "個人"
   ]
 }

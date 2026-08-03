@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Tech News",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.indent|remove_html:(iframe)|markdown}}\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div.indent|remove_html:(iframe)|markdown}}\n\n# 資料來源\n{{url|split:\"/\"|slice:3,6|join:\"/\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
@@ -16,8 +16,7 @@
 		}
 	],
 	"triggers": [
-		"https://technews.tw/",
-		"https://finance.technews.tw/"
+		"/^https:\\/\\/([a-zA-Z0-9-]+\\.)?technews\\.tw\\/.*/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"
