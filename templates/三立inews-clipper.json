@@ -1,12 +1,12 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "新電子",
+	"name": "三立iNews",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n{{selectorHtml: div > div.mem-post-single-content.mem-section|markdown}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsContent|markdown}}{{selectorHtml:article|markdown}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
 	"properties": [
 		{
 			"name": "新聞來源",
-			"value": "{{meta:property:og:site_name}}",
+			"value": "{{site}}",
 			"type": "text"
 		},
 		{
@@ -16,7 +16,8 @@
 		}
 	],
 	"triggers": [
-		"https://www.mem.com.tw/"
+		"https://inews.setn.com/",
+		"https://www.setn.com/"
 	],
 	"noteNameFormat": "{{title}}",
 	"path": "0 Fleet Note"

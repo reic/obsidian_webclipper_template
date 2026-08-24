@@ -1,0 +1,23 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "鉅享號",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n{{content}}\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+	"properties": [
+		{
+			"name": "新聞來源",
+			"value": "鉅亨網",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://hao.cnyes.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "0 Fleet Note"
+}

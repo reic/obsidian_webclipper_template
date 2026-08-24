@@ -1,7 +1,7 @@
 {
   "general_settings": {
     "betaFeatures": false,
-    "legacyMode": false,
+    "legacyMode": true,
     "openBehavior": "popup",
     "saveBehavior": "addToObsidian",
     "showMoreActionsButton": false,
@@ -71,7 +71,7 @@
     "pinPlayer": true
   },
   "stats": {
-    "addToObsidian": 2495,
+    "addToObsidian": 2587,
     "copyToClipboard": 0,
     "saveFile": 1,
     "share": 0
@@ -318,7 +318,7 @@
   },
   "template_1750657568076raoj4yw9e": {
     "id": "1750657568076raoj4yw9e",
-    "name": "MoneyDJ理財網,風傳媒,方格子,三立iNews",
+    "name": "MoneyDJ理財網,風傳媒,方格子",
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
@@ -341,9 +341,7 @@
     "triggers": [
       "https://www.moneydj.com/",
       "https://www.storm.mg/",
-      "https://vocus.cc/",
-      "https://inews.setn.com/",
-      "https://www.setn.com/"
+      "https://vocus.cc/"
     ]
   },
   "template_175091596503536lfr8aoq": {
@@ -596,7 +594,7 @@
       {
         "id": "17503272408923mz7fbk",
         "name": "新聞來源",
-        "value": "{{site}}",
+        "value": "{{meta:property:og:site_name}}",
         "type": "text"
       },
       {
@@ -650,7 +648,7 @@
       {
         "id": "17503272408923mz7fbk",
         "name": "新聞來源",
-        "value": "{{site}}",
+        "value": "{{meta:property:og:site_name}}",
         "type": "text"
       },
       {
@@ -728,7 +726,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "0 Fleet Note",
-    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{selectorHtml:span.created|markdown}}: [{{title}}]({{url}}) ",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:article|first|remove_html:(\"ul,.ad-content\")|markdown}}\n\n# 資料來源\n{{selectorHtml:span.created|markdown}}{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
     "context": "",
     "properties": [
       {
@@ -740,7 +738,7 @@
       {
         "id": "175127299919372ztzlaqb",
         "name": "published",
-        "value": "{{selectorHtml:span.created|markdown}}",
+        "value": "{{selectorHtml:span.created|markdown}}{{published}}",
         "type": "date"
       }
     ],
@@ -767,7 +765,7 @@
       {
         "id": "1751427736893chmgdbhp1",
         "name": "published",
-        "value": "{{published|split:\\\" \\\"|first}}",
+        "value": "{{published}}",
         "type": "date"
       }
     ],
@@ -934,6 +932,33 @@
     "id": "17852167474485ubqxnxj1",
     "context": ""
   },
+  "template_1785909064198cm6apc7d6": {
+    "id": "1785909064198cm6apc7d6",
+    "name": "三立iNews",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "0 Fleet Note",
+    "noteContentFormat": "# {{title}}\n{{selectorHtml:div#newsContent|markdown}}{{selectorHtml:article|markdown}}\n\n\n# 資料來源\n{{published|date:\"YYYY/MM/DD\"}}: [{{title}}]({{url}}) ",
+    "context": "",
+    "properties": [
+      {
+        "id": "17503272408923mz7fbk",
+        "name": "新聞來源",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1751418224474zxaxyd4r2",
+        "name": "published",
+        "value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://inews.setn.com/",
+      "https://www.setn.com/"
+    ]
+  },
   "template_list": [
     "1762996118441j4jv07a",
     "1749544800247o26k4jfrh",
@@ -961,6 +986,7 @@
     "17510802568702jxqjeuyg",
     "1751420526452xu8w8b408",
     "1750657568076raoj4yw9e",
+    "1785909064198cm6apc7d6",
     "17518539622729g8e1g2v3",
     "1754871743728flqrw6zpr",
     "1752203301187ty0e1dvuw",
